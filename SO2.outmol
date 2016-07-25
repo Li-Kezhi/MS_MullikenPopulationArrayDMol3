@@ -1,0 +1,418 @@
+ 
+     ===============================================================
+     Materials Studio DMol^3 version 7.0
+     compiled on Nov 12 2013 14:29:30
+     ===============================================================
+ 
+     ===============================================================
+     Density Functional Theory Electronic Structure Program
+     Copyright (c) 2013, Accelrys Inc. All rights reserved.
+     Cite work using this program as: 
+     B. Delley, J. Chem. Phys. 92,  508  (1990).
+     B. Delley, J. Chem. Phys. 113, 7756 (2000).
+     DMol^3 is available as part of Materials Studio.
+     ===============================================================
+ 
+ 
+DATE:     Mar  8 09:07:47 2016
+ 
+Job started on host WIN-2T9PS5FEQ2M
+
+This run uses    4 processors
+
+Message: License checkout of MS_dmol successful
+ 
+Basis set is read from file:
+D:\MATERI~1.0X6\share\Resources\Quantum\DMol3\BASFILE_v3.5
+
+ 
+ parallel run with   4 processors
+ 
+ no INCOOR file: try ZMAT
+ no ZMAT file: try CAR
+
+Geometry is read from file: SO2.car                                                                                                                                                                                                                                                         
+
+INCOOR, atomic coordinates in au (for archive):
+______________________________________________________________________>8
+
+$coordinates
+S            -1.86401547509725    1.66451094080259    0.00049403110086
+O             0.62657050272203    0.39103850992973   -0.00061569922769
+O            -4.21141827825666    0.14300985653859   -0.00082731642834
+$end
+______________________________________________________________________>8
+
+
+N_atoms =    3     N_atom_types =  2
+
+
+INPUT_DMOL keywords (for archive):
+______________________________________________________________________>8
+
+#Warning: no global confinement specs in BASFILE
+                                                                                                                                    <--
+# Task parameters                                                                                                                   <--
+Calculate                     energy                                                                                                <--
+Symmetry                      off                                                                                                   <--
+Max_memory                    3584                                                                                                  <--
+File_usage                    smart                                                                                                 <--
+                                                                                                                                    <--
+# Electronic parameters                                                                                                             <--
+Spin_polarization             restricted                                                                                            <--
+Charge                        0                                                                                                     <--
+Basis                         dnp                                                                                                   <--
+Pseudopotential               none                                                                                                  <--
+Functional                    pbe                                                                                                   <--
+Aux_density                   octupole                                                                                              <--
+Integration_grid              fine                                                                                                  <--
+Occupation                    thermal 0.0050                                                                                        <--
+Cutoff_Global                 4.0000 angstrom                                                                                       <--
+Scf_density_convergence       1.0000e-007                                                                                           <--
+Scf_charge_mixing             2.0000e-001                                                                                           <--
+Scf_iterations                500                                                                                                   <--
+Scf_diis                      8 pulay                                                                                               <--
+Preconditioner                4.0000                                                                                                <--
+                                                                                                                                    <--
+# Print options                                                                                                                     <--
+Print                         eigval_last_it                                                                                        <--
+                                                                                                                                    <--
+# Calculated properties                                                                                                             <--
+Plot                          potential                                                                                             <--
+Mulliken_analysis             full                                                                                                  <--
+Hirshfeld_analysis            charge                                                                                                <--
+Bond_orders                   on                                                                                                    <--
+Grid                          msbox  3 0.2500 0.2500 0.2500 3.0000                                                                  <--
+______________________________________________________________________>8
+
+
+Publications of specific relevance to this calculation:
+
+Density functional:
+ PBE functional: Perdew Burke Ernzerhof: Phys. Rev. Lett. 77, 3865 (1996)
+
+
+ Fractional occupations and density functional energies and forces; Weinert Davenport: Phys. Rev. B 45, 13709 (1992)
+
+Fractional occupations, iterative stability:
+ Delley in; Modern Density Functional Theory vol 2 pg 221 ff (1995),
+  Elsevier, Seminario Politzer eds.
+
+Parallel eigenvalue solution:
+Parallel solution of partial symmetric eigenvalue problems from electronic structure calculations:
+Auckenthaler, Blum, Bungartz, et al.: Parallel Computing 37, 783 (2011)
+
+ 
+Calculation is Spin_restricted
+ 
+ 
+Warning: no SYM file, no symmetry used in vibrational analysis
+Warning: at least C1 SYM file should be there for optgeom
+Oxygen       nbas=  1, z=   8, nrfn=  7, rcut=  7.56, e_ref= -0.056429 Ha
+                                  rcore=  0.00  zval=   8.00   8.00
+   n=1  L=0  occ= 2.00 e=     -18.895620Ha      -514.1762eV
+   n=2  L=0  occ= 2.00 e=      -0.876655Ha       -23.8550eV
+   n=2  L=1  occ= 4.00 e=      -0.329847Ha        -8.9756eV
+   n=2  L=0  occ= 0.00 e=      -2.141939Ha       -58.2852eV
+   n=2  L=1  occ= 0.00 e=      -1.589268Ha       -43.2462eV
+   n=3  L=2  occ= 0.00 e=      -2.722219Ha       -74.0754eV
+   n=3  L=2  occ= 0.00 e=      -1.388515Ha       -37.7834eV  eliminated
+Sulfur       nbas=  2, z=  16, nrfn=  8, rcut=  7.56, e_ref= -0.036657 Ha
+                                  rcore=  0.00  zval=  16.00  16.00
+   n=1  L=0  occ= 2.00 e=     -88.094465Ha     -2397.1734eV
+   n=2  L=0  occ= 2.00 e=      -7.719442Ha      -210.0568eV
+   n=2  L=1  occ= 6.00 e=      -5.737202Ha      -156.1173eV
+   n=3  L=0  occ= 2.00 e=      -0.619989Ha       -16.8708eV
+   n=3  L=1  occ= 4.00 e=      -0.247731Ha        -6.7411eV
+   n=3  L=0  occ= 0.00 e=      -1.442311Ha       -39.2473eV
+   n=3  L=1  occ= 0.00 e=      -1.028143Ha       -27.9772eV
+   n=3  L=2  occ= 0.00 e=      -0.477832Ha       -13.0025eV
+
+Symmetry orbitals C1                            
+    n  norb    representation
+    1    46        a    
+  total number of valence orbitals:     46
+
+
+ molecule charge=      0.0   active electron number=      32.0
+ (without charge=             32.0)
+ electron temperature=     0.005_Ha      0.14_eV     1579._K
+ 
+
+ vxcg/d_diis workspace has max memory requirements        11.7 MB 
+
+ real array elements, matrices vectors etc:       3.2 MB 
+ integer arrays                           :       0.3 MB 
+ min recommended for all-incl workspace   :      11.8 MB 
+Total memory allocated for arrays         :      11.8 MB 
+Memory for temporary file storage on disk :       5.4 MB
+
+            Total Energy           Binding E       Cnvgnce     Time   Iter
+Ef         -548.499257Ha        -0.5525749Ha      2.37E-01     0.0m      1
+Ef         -548.399201Ha        -0.4525185Ha      8.57E-02     0.0m      2
+Ef         -548.395037Ha        -0.4483543Ha      5.58E-02     0.0m      3
+Ef         -548.397107Ha        -0.4504241Ha      9.26E-03     0.0m      4
+Ef         -548.397150Ha        -0.4504671Ha      5.41E-03     0.0m      5
+Ef         -548.397084Ha        -0.4504018Ha      4.19E-03     0.0m      6
+Ef         -548.397090Ha        -0.4504080Ha      2.95E-03     0.0m      7
+Ef         -548.397065Ha        -0.4503823Ha      5.20E-04     0.0m      8
+Ef         -548.397059Ha        -0.4503768Ha      2.18E-04     0.0m      9
+Ef         -548.397061Ha        -0.4503789Ha      1.34E-04     0.0m     10
+Ef         -548.397061Ha        -0.4503781Ha      1.33E-05     0.0m     11
+Ef         -548.397061Ha        -0.4503781Ha      8.32E-06     0.0m     12
+Ef         -548.397060Ha        -0.4503780Ha      3.43E-06     0.0m     13
+Ef         -548.397060Ha        -0.4503780Ha      1.26E-06     0.0m     14
+Ef         -548.397060Ha        -0.4503780Ha      8.94E-07     0.0m     15
+Ef         -548.397060Ha        -0.4503780Ha      4.19E-07     0.0m     16
+Ef         -548.397060Ha        -0.4503780Ha      2.47E-07     0.0m     17
+Ef         -548.397060Ha        -0.4503780Ha      2.03E-07     0.0m     18
+Ef         -548.397060Ha        -0.4503780Ha      1.09E-07     0.0m     19
+Ef         -548.397060Ha        -0.4503780Ha      3.20E-08     0.0m     20
+Message: SCF converged
+
+Smearing energy  -kTS_e= -0.000001Ha
+
+
+Energy of Highest Occupied Molecular Orbital:  -0.29803Ha    -8.110eV
+Energy of Lowest Unoccupied Molecular Orbital:  -0.17610Ha    -4.792eV
+
+  HOMO is orbital number    16
+  LUMO is orbital number    17
+
+    state                         eigenvalue        occupation
+                              (au)          (ev)
+
+    1   +   1   a        -88.235635     -2401.015     2.000
+    2   +   2   a        -18.814047      -511.956     2.000
+    3   +   3   a        -18.813994      -511.955     2.000
+    4   +   4   a         -7.845394      -213.484     2.000
+    5   +   5   a         -5.866491      -159.635     2.000
+    6   +   6   a         -5.865831      -159.617     2.000
+    7   +   7   a         -5.860153      -159.463     2.000
+    8   +   8   a         -1.050832       -28.595     2.000
+    9   +   9   a         -0.967293       -26.321     2.000
+   10   +  10   a         -0.593793       -16.158     2.000
+   11   +  11   a         -0.451248       -12.279     2.000
+   12   +  12   a         -0.448272       -12.198     2.000
+   13   +  13   a         -0.441420       -12.012     2.000
+   14   +  14   a         -0.343789        -9.355     2.000
+   15   +  15   a         -0.321113        -8.738     2.000
+   16   +  16   a         -0.298028        -8.110     2.000
+   17   +  17   a         -0.176102        -4.792     0.000
+   18   +  18   a         -0.021484        -0.585     0.000
+   19   +  19   a          0.025415         0.692     0.000
+ 
+
+  Orbital occupation is:
+     16  a  ( 2)
+  Total number electrons:              32.0
+
+
+Energy components:
+   Sum of atomic energies =     -547.9466825Ha
+                  Kinetic =       -2.4248639Ha
+            Electrostatic =        1.6289583Ha
+     Exchange-correlation =        0.1960128Ha
+        Spin polarization =        0.1495149Ha
+Ef         -548.397060Ha        -0.4503780Ha      1.90E-08     0.0m     21
+
+df  binding energy      -0.4503780Ha         -12.25541eV        -282.622kcal/mol
+
+Df  binding energy extrapolated to T=0K      -0.4503773 Ha       -12.25540 eV
+
+ +++ Entering Properties Section +++ 
+
+
+
+Charge partitioning by Hirshfeld method: (   0.00003)
+  S     1 charge                           0.3930
+  O     2 charge                          -0.1965
+  O     3 charge                          -0.1965
+
+Mulliken Population analysis
+Population matrices are scaled by 1000. for display
+
+ Population analysis for representation  1    a    
+   1 10 0  2.000 2000.
+   1 20 0  2.000    0. 2018.
+   1 30 0  1.773    0.    0. 2013.
+   1 30 0  0.048    0.    0.    0.   29.
+   1 21-1  2.000    0.    0.    0.    0. 2001.
+   1 31-1  1.077    0.    0.    0.    0.    0.  881.
+   1 31-1  0.030    0.    0.    0.    0.    0.    0.   20.
+   1 21 0  2.000    0.    0.    0.    0.    0.    0.    0. 2000.
+   1 31 0  0.980    0.    0.    0.    0.    0.    0.    0.    0.  729.
+   1 31 0 -0.009    0.    0.    0.    0.    0.    0.    0.    0.    0.   11.
+   1 21 1  2.000    0.    0.    0.    0.    0.    0.    0.    0.    0.    0. 2004.
+   1 31 1  0.732    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.  541.
+   1 31 1  0.069    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   24.
+   1 32-2  0.226    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   94.
+   1 32-1  0.029    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    8.
+   1 32 0  0.057    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   26.
+   1 32 1  0.217    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   68.
+   1 32 2  0.316    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.  122.
+   2 10 0  2.000    0.    0.   -1.    0.    0.    0.    0.    0.    0.    0.    0.   -2.    0.   -1.    0.    0.    0.    0. 2003.
+   2 20 0  1.836    0.   -2.  -79.    2.    0.   11.   -2.    0.    0.    0.   -1.  -13.    4.   12.    0.   12.    0.   16.    0.
+                 1868.
+   2 20 0 -0.001    0.    1.   -7.    2.    0.   -2.    0.    0.    0.    0.    0.  -16.    3.    0.    0.    0.    0.    0.    0.
+                    0.   13.
+   2 21-1  1.635    0.   -3.  -36.    1.    0.  -11.    2.    0.    0.    0.    0.   69.    2.   25.    0.    2.    0.   78.    0.
+                    0.    0. 1507.
+   2 21-1 -0.010    0.    0.   -6.    0.    0.   -3.    0.    0.    0.    0.    0.   -2.    0.    1.    0.    0.    0.   -2.    0.
+                    0.    0.    0.    3.
+   2 21 0  1.385    0.    0.    0.    0.    0.    0.    0.    0.  124.  -11.    0.    0.    0.    0.    7.    0.   76.    0.    0.
+                    0.    0.    0.    0. 1199.
+   2 21 0 -0.007    0.    0.    0.    0.    0.    0.    0.    0.   -7.    1.    0.    0.    0.    0.    0.    0.   -1.    0.    0.
+                    0.    0.    0.    0.    0.    1.
+   2 21 1  1.358    0.   -5.   20.    3.    0.   95.    2.    0.    0.    0.   -1.   59.   15.   33.    0.    2.    0.   -3.    0.
+                    0.    0.    0.    0.    0.    0. 1153.
+   2 21 1 -0.008    0.    0.  -15.    0.    0.   -2.    0.    0.    0.    0.    0.    1.   -2.    1.    0.    0.    0.   -1.    0.
+                    0.    0.    0.    0.    0.    0.    0.    6.
+   2 32-2  0.010    0.    0.    1.    1.    0.    0.    0.    0.    0.    0.    0.    3.    1.    0.    0.    0.    0.    2.    0.
+                    0.    0.    0.    0.    0.    0.    0.    0.    3.
+   2 32-1  0.003    0.    0.    0.    0.    0.    0.    0.    0.    2.    0.    0.    0.    0.    0.    0.    0.    1.    0.    0.
+                    0.    0.    0.    0.    0.    0.    0.    0.    0.    1.
+   2 32 0  0.003    0.    0.    1.    0.    0.    0.    0.    0.    0.    0.    0.    1.    0.    0.    0.    0.    0.    0.    0.
+                    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    1.
+   2 32 1  0.011    0.    0.    0.    0.    0.    0.    0.    0.    7.    0.    0.    0.    0.    0.    1.    0.    2.    0.    0.
+                    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    2.
+   2 32 2  0.012    0.    0.    0.    1.    0.    6.    1.    0.    0.    0.    0.    0.    0.    2.    0.    0.    0.    0.    0.
+                    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    3.
+   3 10 0  2.000    0.    0.   -1.    0.    0.    0.    0.    0.    0.    0.    0.   -1.    0.   -1.    0.    0.    0.    0.    0.
+                    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0. 2003.
+   3 20 0  1.836    0.   -2.  -79.    2.    0.   12.   -3.    0.    0.    0.   -1.  -14.    5.   18.    0.   12.    0.   10.    0.
+                    2.    0.    0.    0.    0.    0.    4.    2.    0.    0.    0.    0.    0.    0. 1868.
+   3 20 0 -0.001    0.    1.   -7.    2.    0.   -4.    1.    0.    0.    0.    0.  -14.    2.    0.    0.    0.    0.    0.    0.
+                    0.   -1.    0.    0.    0.    0.    6.   -1.    0.    0.    0.    0.    0.    0.    0.   13.
+   3 21-1  1.608    0.   -4.  -41.    2.    0.  -16.    6.    0.    0.    0.   -1.   83.    3.    7.    0.    2.    0.   88.    0.
+                    0.    0.    2.   -2.    0.    0.    1.    0.    0.    0.    0.    0.    0.    0.    0.    0. 1478.
+   3 21-1 -0.011    0.    0.   -8.    0.    0.   -2.    0.    0.    0.    0.    0.   -4.    0.    2.    0.    0.    0.   -2.    0.
+                    0.    0.   -2.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    3.
+   3 21 0  1.385    0.    0.    0.    0.    0.    0.    0.    0.  124.  -11.    0.    0.    0.    0.   13.    0.   70.    0.    0.
+                    0.    0.    0.    0.  -11.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0. 1199.
+   3 21 0 -0.007    0.    0.    0.    0.    0.    0.    0.    0.   -7.    1.    0.    0.    0.    0.    0.    0.   -1.    0.    0.
+                    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.
+                    1.
+   3 21 1  1.385    0.   -4.   25.    2.   -1.  112.    2.    0.    0.    0.   -1.   32.   11.   31.    0.    1.    0.    7.    0.
+                    4.    6.   -1.    0.    0.    0.  -27.    2.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.
+                    0. 1183.
+   3 21 1 -0.007    0.    0.  -13.    0.    0.   -4.    0.    0.    0.    0.    0.    3.   -2.    1.    0.    0.    0.   -2.    0.
+                    2.   -1.    0.    0.    0.    0.    2.   -1.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.
+                    0.    0.    6.
+   3 32-2  0.010    0.    0.    2.    1.    0.    0.    0.    0.    0.    0.    0.    3.    1.    0.    0.    0.    0.    1.    0.
+                    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.
+                    0.    0.    0.    3.
+   3 32-1  0.004    0.    0.    0.    0.    0.    0.    0.    0.    3.    0.    0.    0.    0.    0.    0.    0.    1.    0.    0.
+                    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.
+                    0.    0.    0.    0.    1.
+   3 32 0  0.003    0.    0.    1.    0.    0.    0.    0.    0.    0.    0.    0.    1.    0.    0.    0.    0.    0.    0.    0.
+                    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.
+                    0.    0.    0.    0.    0.    1.
+   3 32 1  0.010    0.    0.    0.    0.    0.    0.    0.    0.    6.    0.    0.    0.    0.    0.    1.    0.    1.    0.    0.
+                    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.
+                    0.    0.    0.    0.    0.    0.    2.
+   3 32 2  0.012    0.    0.    0.    0.    0.    6.    0.    0.    0.    0.    0.    0.    0.    1.    0.    0.    0.    1.    0.
+                    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.    0.
+                    0.    0.    0.    0.    0.    0.    0.    3.
+              spin up    down    charge    spin
+ S (  1) 10 0   1.000   1.000     2.000   0.000
+ S (  1) 20 0   1.000   1.000     2.000   0.000
+ S (  1) 30 0   0.887   0.887     1.773   0.000
+ S (  1) 30 0   0.024   0.024     0.048   0.000
+ S (  1) 21-1   1.000   1.000     2.000   0.000
+ S (  1) 31-1   0.539   0.539     1.077   0.000
+ S (  1) 31-1   0.015   0.015     0.030   0.000
+ S (  1) 21 0   1.000   1.000     2.000   0.000
+ S (  1) 31 0   0.490   0.490     0.980   0.000
+ S (  1) 31 0  -0.004  -0.004    -0.009   0.000
+ S (  1) 21 1   1.000   1.000     2.000   0.000
+ S (  1) 31 1   0.366   0.366     0.732   0.000
+ S (  1) 31 1   0.034   0.034     0.069   0.000
+ S (  1) 32-2   0.113   0.113     0.226   0.000
+ S (  1) 32-1   0.014   0.014     0.029   0.000
+ S (  1) 32 0   0.029   0.029     0.057   0.000
+ S (  1) 32 1   0.108   0.108     0.217   0.000
+ S (  1) 32 2   0.158   0.158     0.316   0.000
+ O (  2) 10 0   1.000   1.000     2.000   0.000
+ O (  2) 20 0   0.918   0.918     1.836   0.000
+ O (  2) 20 0  -0.001  -0.001    -0.001   0.000
+ O (  2) 21-1   0.818   0.818     1.635   0.000
+ O (  2) 21-1  -0.005  -0.005    -0.010   0.000
+ O (  2) 21 0   0.692   0.692     1.385   0.000
+ O (  2) 21 0  -0.004  -0.004    -0.007   0.000
+ O (  2) 21 1   0.679   0.679     1.358   0.000
+ O (  2) 21 1  -0.004  -0.004    -0.008   0.000
+ O (  2) 32-2   0.005   0.005     0.010   0.000
+ O (  2) 32-1   0.002   0.002     0.003   0.000
+ O (  2) 32 0   0.002   0.002     0.003   0.000
+ O (  2) 32 1   0.006   0.006     0.011   0.000
+ O (  2) 32 2   0.006   0.006     0.012   0.000
+ O (  3) 10 0   1.000   1.000     2.000   0.000
+ O (  3) 20 0   0.918   0.918     1.836   0.000
+ O (  3) 20 0  -0.001  -0.001    -0.001   0.000
+ O (  3) 21-1   0.804   0.804     1.608   0.000
+ O (  3) 21-1  -0.005  -0.005    -0.011   0.000
+ O (  3) 21 0   0.692   0.692     1.385   0.000
+ O (  3) 21 0  -0.004  -0.004    -0.007   0.000
+ O (  3) 21 1   0.693   0.693     1.385   0.000
+ O (  3) 21 1  -0.004  -0.004    -0.007   0.000
+ O (  3) 32-2   0.005   0.005     0.010   0.000
+ O (  3) 32-1   0.002   0.002     0.004   0.000
+ O (  3) 32 0   0.002   0.002     0.003   0.000
+ O (  3) 32 1   0.005   0.005     0.010   0.000
+ O (  3) 32 2   0.006   0.006     0.012   0.000
+
+
+ summarized population analysis
+              spin up    down    charge    spin
+ S (  1) 10     1.000   1.000     2.000   0.000
+ S (  1) 20     1.000   1.000     2.000   0.000
+ S (  1) 30     0.911   0.911     1.821   0.000
+ S (  1) 21     3.000   3.000     6.000   0.000
+ S (  1) 31     1.440   1.440     2.880   0.000
+ S (  1) 32     0.422   0.422     0.844   0.000
+ O (  2) 10     1.000   1.000     2.000   0.000
+ O (  2) 20     0.917   0.917     1.835   0.000
+ O (  2) 21     2.176   2.176     4.353   0.000
+ O (  2) 32     0.020   0.020     0.039   0.000
+ O (  3) 10     1.000   1.000     2.000   0.000
+ O (  3) 20     0.917   0.917     1.835   0.000
+ O (  3) 21     2.176   2.176     4.353   0.000
+ O (  3) 32     0.020   0.020     0.039   0.000
+
+ Mulliken atomic charges:
+          charge    spin 
+ S (  1)   0.454   0.000
+ O (  2)  -0.227   0.000
+ O (  3)  -0.227   0.000
+ 
+ Mulliken bond orders
+    S    1    O    2    0.9581
+    S    1    O    3    0.9581
+ 
+ Mayer bond orders
+    S    1    O    2    2.1038
+    S    1    O    3    2.1038
+    O    2    O    3    0.2502
+ 
+ Mayer total valence
+  S     1    4.2076
+  O     2    2.3540
+  O     3    2.3540
+
+
+Plotting output:
+  property:                                                file name:
+  DMol3 electrostatic potential Ha*electron(-1)            SO2_potential.grd             
+
+ grid specifications: I_dim, Origin, n_intervals to corner:
+    3   -9.4486   -5.1967   -5.6692   24   -9.4486   -5.1967    5.6692
+   27   -9.4486    7.5589   -5.6692   34    6.6140   -5.1967   -5.6692
+ 
+Message: License checkin of MS_dmol successful
+
+Message: DMol3 job finished successfully
+
+ time all done       0.03m        2.05s
+
+DMol3.pl message: DMol3 job finished in 0 hr 0 min 7 sec.
