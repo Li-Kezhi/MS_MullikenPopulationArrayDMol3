@@ -1,0 +1,7 @@
+      0  --  Atom 1: n = 3, l = 0
+      1  --  Atom 1: n = 3, l = 1
+      2  --  Atom 1: n = 3, l = 2
+      3  --  Atom 2: n = 2, l = 0
+      4  --  Atom 2: n = 2, l = 1
+      5  --  Atom 3: n = 2, l = 0
+      6  --  Atom 3: n = 2, l = 1
