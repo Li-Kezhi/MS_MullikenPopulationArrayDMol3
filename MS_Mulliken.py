@@ -1,3 +1,16 @@
+#!/usr/bin/python
+#coding=utf-8
+
+'''
+To plot Mulliken population result from Materials Studio DMol3
+File required: *.outmol
+    Mulliken population matrix should be involved in the file
+'''  
+
+__author__ = "LI Kezhi" 
+__date__ = "$2016-07-26$"
+__version__ = "1.0"
+
 import numpy as np
 import matplotlib.pyplot as plt
 import time      # TEST
