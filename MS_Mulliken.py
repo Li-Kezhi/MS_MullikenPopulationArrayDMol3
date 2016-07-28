@@ -16,16 +16,17 @@ import matplotlib.pyplot as plt
 import time      # TEST
 import sys   
 
-position = "F:\\BaiduYunDownload\\test\\"
-filename = position + "SO2.outmol"
+position = "E:\\SkyDrive\\Sharing data\\Materials Studio\\SO2-CeZr\\"
+filename = position + "Ce(111)Zr - SO2_2.outmol"
 
 ############ User Options ########
-atomSelection = None                     # None: analyse all atoms
-#atomSelection = [1, 2]                  # Include the atoms to be analysed
+#atomSelection = None                     # None: analyse all atoms
+atomSelection = [13, 16, 26, 51, 63, 73, 74, 75]                  # Include the atoms to be analysed
 valanceElectronsSelection = True         # True: only consider valance electrons NOT FULLY TESTED!
 ms_mergeSelection = True                 # True: ignore the differences in ms
 atom_mergeSelection = False              # True: ignore the differences in the same atom
                                          # If True, valance/ms switches are TURN OFF automatically
+
 color = "hot"                            # "bone"/"jet"/"spectral"/...
 
 ############ Built-in Functions ###########
@@ -380,15 +381,15 @@ reIndex(listElectrons)
 clock2 = time.time()        # TEST
 print(clock2-clock1)
 
-# Step 2: plotting
-plt.imshow(MullikenPopulationArray, interpolation = "nearest", cmap = color)
-plt.colorbar()
-plt.show()
-
-# Step 3: print electrons list
+# Step 2: print electrons list
 outfile = open(position + "ElectronsList.txt", "w")
 num = 0
 for electron in listElectrons:
     outfile.write("%7i  --  " % num + str(electron) + "\n")
     num += 1
 outfile.close()
+
+# Step 3: plotting
+plt.imshow(MullikenPopulationArray, interpolation = "nearest", cmap = color, vmin = 0.0, vmax = 1.0)
+plt.colorbar()
+plt.show()
