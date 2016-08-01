@@ -8,23 +8,22 @@ File required: *.outmol
 '''  
 
 __author__ = "LI Kezhi" 
-__date__ = "$2016-07-26$"
-__version__ = "1.0"
+__date__ = "$2016-08-01$"
+__version__ = "1.1"
 
 import numpy as np
 import matplotlib.pyplot as plt
-import time      # TEST
 import sys   
 
 position = "E:\\SkyDrive\\Sharing data\\Materials Studio\\SO2-CeZr\\"
-filename = position + "Ce(111)Zr - SO2_2.outmol"
+filename = position + "Ce(111) - SO2.outmol"
 
 ############ User Options ########
 #atomSelection = None                     # None: analyse all atoms
-atomSelection = [13, 16, 26, 51, 63, 73, 74, 75]                  # Include the atoms to be analysed
+atomSelection = [13, 49, 16, 52, 50, 27, 26, 62, 75, 73, 74]                  # Include the atoms to be analysed
 valanceElectronsSelection = True         # True: only consider valance electrons NOT FULLY TESTED!
 ms_mergeSelection = True                 # True: ignore the differences in ms
-atom_mergeSelection = False              # True: ignore the differences in the same atom
+atom_mergeSelection = True              # True: ignore the differences in the same atom
                                          # If True, valance/ms switches are TURN OFF automatically
 
 color = "hot"                            # "bone"/"jet"/"spectral"/...
@@ -303,15 +302,13 @@ def merge_atom(electrons, matrix):
 
 ############ Main Code ###########
 
-clock0 = time.time()           # TEST
-
 # Step1: generate an array
 MullikenFlag = False
-num = 0   # TEST
+#num = 0   # TEST
 listLikeArray = []
 listElectrons = []
 for line in open(filename):
-    num += 1   # TEST
+    #num += 1   # TEST
     #print(str(num))   # TEST
     if MullikenFlag == False:           # Start flag
         if len(line) == 52 and ("Population analysis for representation" in line):
@@ -337,7 +334,8 @@ for line in open(filename):
             while '' in splitting:
                 splitting.remove('')
 
-            splitting = map(lambda x: int(x), splitting)
+            splitting = map(int, splitting)
+            
             listLikeArray.append(splitting)
             listElectrons.append(Electron(atomNum, electron_n, electron_l, electron_ms, occupation))
 
@@ -358,9 +356,6 @@ for i in xrange(len(listLikeArray)):
 
 del listLikeArray
 
-clock1 = time.time()    # TEST
-print(clock1-clock0)
-
 # Step 1.x: Simplification
 if atom_mergeSelection == True:
     valanceElectronsSelection, ms_mergeSelection = False, False
@@ -378,8 +373,6 @@ if atom_mergeSelection == True:                                  # Atom merging
 
 quick_sort(listElectrons, MullikenPopulationArray)               # Sort the result
 reIndex(listElectrons)
-clock2 = time.time()        # TEST
-print(clock2-clock1)
 
 # Step 2: print electrons list
 outfile = open(position + "ElectronsList.txt", "w")
