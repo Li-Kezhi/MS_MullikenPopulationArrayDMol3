@@ -8,19 +8,20 @@ File required: *.outmol
 '''  
 
 __author__ = "LI Kezhi" 
-__date__ = "$2016-08-01$"
-__version__ = "1.1"
+__date__ = "$2016-10-31$"
+__version__ = "1.2"
 
 import numpy as np
 import matplotlib.pyplot as plt
 import sys   
 
-position = "E:\\SkyDrive\\Sharing data\\Materials Studio\\SO2-CeZr\\"
+position = ""  # Current route
 filename = position + "Ce(111) - SO2.outmol"
 
 ############ User Options ########
 #atomSelection = None                     # None: analyse all atoms
-atomSelection = [13, 49, 16, 52, 50, 27, 26, 62, 75, 73, 74]                  # Include the atoms to be analysed
+atomSelection = [16, 26, 62, 50, 52, 27, 13, 49, 73, 74, 75]                  # Include the atoms to be analysed
+                                         # The sequence determines final plotting sequence
 valanceElectronsSelection = True         # True: only consider valance electrons NOT FULLY TESTED!
 ms_mergeSelection = True                 # True: ignore the differences in ms
 atom_mergeSelection = True              # True: ignore the differences in the same atom
@@ -141,6 +142,37 @@ def quick_sort(electrons,matrix,low = None,high = None):
         quick_sort(electrons,matrix,low,key_index)
         quick_sort(electrons,matrix,key_index+1,high)
     
+def isSorted(listSubject):
+    '''
+    Check if a list is sorted
+    '''
+    length = len(listSubject)
+    for i in xrange(1, length):
+        if listSubject[i] < listSubject[i-1]:
+            return False
+    return True
+
+
+def bubbleSort(ref,electrons,matrix): 
+    for i in range(len(ref)-1, -1, -1):
+        for j in range(i):
+            if ref[j] > ref[j + 1]:
+                ref[j], ref[j + 1] = ref[j + 1], ref[j]
+                electrons[j], electrons[j + 1] = electrons[j + 1], electrons[j]
+                exchangeSymMatrix(matrix, j, j+1)
+
+def sortAtomList(electrons, matrix, atomSequence):
+    '''
+    Sort according the the sequence of atomSequence(list of atomNum)
+    '''
+    numAtoms = len(atomSequence)
+    transformMatrix = np.zeros_like(matrix)
+    electronsIndex = []    #electronsIndex[i] = j: the i'th atom in electrons is the j'th in atomSequence
+    for electron in electrons:
+        index = atomSequence.index(electron.get_atomNum())
+        electronsIndex.append(index)
+    bubbleSort(electronsIndex,electrons,matrix)
+
 def reIndex(electrons):
     """
     Re-index the electrons after sorting
@@ -372,6 +404,8 @@ if atom_mergeSelection == True:                                  # Atom merging
     listElectrons, MullikenPopulationArray = merge_atom(listElectrons, MullikenPopulationArray)
 
 quick_sort(listElectrons, MullikenPopulationArray)               # Sort the result
+if not atomSelection == None and not isSorted(atomSelection):
+    sortAtomList(listElectrons, MullikenPopulationArray, atomSelection)  # Sort according to atomSelection
 reIndex(listElectrons)
 
 # Step 2: print electrons list
@@ -386,3 +420,6 @@ outfile.close()
 plt.imshow(MullikenPopulationArray, interpolation = "nearest", cmap = color, vmin = 0.0, vmax = 1.0)
 plt.colorbar()
 plt.show()
+
+# Step 4: saving plotting data
+np.savetxt('MullikenArray.txt', MullikenPopulationArray)
