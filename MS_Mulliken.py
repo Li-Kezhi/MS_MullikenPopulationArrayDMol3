@@ -14,8 +14,9 @@ __version__ = "1.2"
 import numpy as np
 import matplotlib.pyplot as plt
 import sys   
+#import os
 
-position = ""  # Current route
+position = ".\\Examples\\"  # Current route
 filename = position + "Ce(111) - SO2.outmol"
 
 ############ User Options ########
@@ -422,4 +423,4 @@ plt.colorbar()
 plt.show()
 
 # Step 4: saving plotting data
-np.savetxt('MullikenArray.txt', MullikenPopulationArray)
+np.savetxt(position + 'MullikenArray.txt', MullikenPopulationArray)
